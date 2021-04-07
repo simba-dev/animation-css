@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    border: 5px solid black;
+    margin: 10px;
+    height: 600px;
+    width: 800px;
+    padding-top: 20px;
+}
+
+.container div{
+    animation:vertical-movement 2s linear infinite, horizontal-movement 9s linear infinite;
+}
+
+
+@keyframes vertical-movement{
+    0% {
+        padding-top:20px;     
+    }
+    50%{
+        padding-top:470px;
+    }
+    100%{
+        padding-top:20px;
+    }
+}
+
+@keyframes horizontal-movement{
+    0% {
+        padding-left:0px;;
+    }
+
+    50%{
+        padding-left:695px;
+    }
+    100%{
+        padding-left:0px;
+    }
+}
