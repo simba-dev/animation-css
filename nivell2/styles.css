@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    border: 5px solid black;
+    background-image:url("img/tennis_court.jpg");
+    background-size:cover;
+    margin: 10px;
+    height: 600px;
+    width: 800px;
+
+    position: absolute;
+    margin:auto;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.container div{
+    animation: lateral 7s linear infinite;
+   
+
+    
+}
+
+.container div img{
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation:bounce 0.8s infinite,deformation 0.8s ease-in-out infinite; 
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(50px);
+        animation-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530)
+    }
+    50%{
+        transform: translateY(515px);
+        animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    }
+    100%{
+        transform: translateY(50px);
+    }
+}
+
+@keyframes deformation {
+    0%{
+        height: 100px;
+        width: 100px;
+    }
+    46%{
+        height: 110px;
+        width: 95px;
+    }
+    50%{
+        height: 80px;
+        width: 115px;
+    }
+    53%{
+        height: 110px;
+        width: 95px;
+    }
+    100%{
+        height: 100px;
+        width: 100px;
+    }
+}
+
+
+
+@keyframes lateral {
+    0%{
+        transform: translateX(-350px);
+    }
+    50%{
+        transform: translateX(350px);
+    }
+    100%{
+        transform: translateX(-350px);
+    }
+
+}
